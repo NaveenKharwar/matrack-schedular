@@ -1,0 +1,231 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import "~bootstrap";
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+#navbar {
+  background: #118dc3;
+  .has-search {
+    .form-control {
+      padding-right: 2.375rem;
+    }
+    .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #aaa;
+      right: 25px;
+    }
+  }
+}
+.calendar {
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    th {
+      text-align: left;
+      white-space: nowrap;
+      padding: 5px;
+    }
+    td {
+      border: 1px solid #f2f2f2;
+      position: relative;
+    }
+    td {
+      padding: 50px 100px;
+    }
+  }
+}
+
+.calendar-container {
+  .date {
+    margin-bottom: 30px;
+    span {
+      color: #ff6666;
+      font-size: 54px;
+    }
+  }
+  padding-left: 100px;
+  padding-right: 100px;
+  .boxy-box {
+    color: white;
+    border-radius: 5px;
+    padding: 15px 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+    span {
+      font-size: 14px;
+    }
+    .details {
+      p {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+  .driver-list {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  table {
+      margin-bottom: 25px;
+  }
+}
+
+// Single Calendar
+
+.single-calendar {
+  .form-inline {
+    margin-top: 60px;
+    margin-bottom: 45px;
+  }
+  #calendar {
+    tr,
+    tbody {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      width: 100%;
+    }
+    td,
+    th {
+      padding: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+    .weekdays {
+      th {
+        border: none !important;
+        color: #000;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        &:first-child {
+          color: #ff6666;
+        }
+      }
+    }
+    td {
+      min-height: 212px;
+      display: flex;
+      flex-direction: column;
+    }
+    .day {
+      position: relative;
+      .date {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        & {
+          font-size: 30px;
+          font-weight: 600;
+          color: #000;
+        }
+      }
+      &:first-child {
+        .date {
+          background-color: #ff6666;
+          color: #fff;
+        }
+      }
+    }
+    .event {
+      p {
+        color: #000;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding: 5px 6px;
+        border-radius: 50px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+    }
+    tr:nth-child(even) td:nth-child(even),
+    tr:nth-child(odd) td:nth-child(odd) {
+      background: #f5f5f5;
+    }
+    tr:nth-child(odd) td:nth-child(even),
+    tr:nth-child(even) td:nth-child(odd) {
+      background: #fff;
+    }
+  }
+  @media (max-width: 768px) {
+    #calendar {
+      grid-template-columns: 1fr;
+      li {
+        height: auto !important;
+        border: 1px solid #ededed;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: -1px;
+      }
+      tr,
+      tbody {
+        grid-template-columns: 1fr;
+      }
+      tr {
+        grid-column: 1 / 2;
+      }
+      .date {
+        align-self: flex-start;
+      }
+    }
+  }
+  option {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 25px;
+  width: 25px;
+  background: #ccc;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 15px;
+  background: #fff;
+  border-radius: 25px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  -webkit-border-radius: 25px;
+}
