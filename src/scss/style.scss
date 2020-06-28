@@ -37,6 +37,10 @@ body {
     }
   }
 }
+.form-control {
+  color: #000;
+  font-weight: 600;
+}
 .calendar {
   table {
     border-collapse: collapse;
@@ -68,8 +72,8 @@ body {
       font-size: 54px;
     }
   }
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
   .boxy-box {
     color: white;
     border-radius: 5px;
@@ -136,7 +140,8 @@ body {
       }
     }
     td {
-      min-height: 212px;
+      height: 200px;
+      width: 200px;
       display: flex;
       flex-direction: column;
     }
@@ -158,6 +163,7 @@ body {
           font-size: 30px;
           font-weight: 600;
           color: #000;
+          margin-bottom: 6px;
         }
       }
       &:first-child {
@@ -168,14 +174,20 @@ body {
       }
     }
     .event {
-      p {
-        color: #000;
-        font-size: 12px;
-        font-weight: 500;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 10px;
-        padding: 5px 6px;
         border-radius: 50px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        p {
+          color: #000;
+          font-size: 9px;
+          font-weight: 500;
+          margin-bottom: 0;
+          margin: 0.5rem 0.8rem;
+        }
       }
     }
     tr:nth-child(even) td:nth-child(even),
