@@ -1,5 +1,9 @@
 {
     "/dist/js/script.js": "/dist/js/script.js",
     "/dist/css/style.css": "/dist/css/style.css",
-    "/dist/assets/icon-old.png": "/dist/assets/icon-old.png"
+    "/dist/assets/icon-old.png": "/dist/assets/icon-old.png",
+    "/dist/js/clayfy.css": "/dist/js/clayfy.css",
+    "/dist/js/clayfy.css.map": "/dist/js/clayfy.css.map",
+    "/dist/js/clayfy.min.css": "/dist/js/clayfy.min.css",
+    "/dist/js/clayfy.min.js": "/dist/js/clayfy.min.js"
 }

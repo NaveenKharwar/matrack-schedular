@@ -7,4 +7,5 @@ mix.js('src/js/script.js', 'dist/js/')
     })
     .copy('src/assets/**/*', 'dist/assets', false)
     .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'dist/webfonts')
+    .copy('src/js/clayfy/**/*', 'dist/js')
     .disableNotifications();
